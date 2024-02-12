@@ -1,6 +1,6 @@
 ## Introduction
 
-This is a hometask project for [株式会社var](https://nextjs.org).
+This is a hometask project for [株式会社var](https://var-co-ltd-frontend.vercel.app/).
 
 ## Technologies Used
 
