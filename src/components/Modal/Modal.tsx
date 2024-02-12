@@ -1,6 +1,9 @@
 import { FC, Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { classNames } from '@/utils';
+import { Noto_Sans_JP } from 'next/font/google';
+
+const noto = Noto_Sans_JP({ subsets: ['latin'] });
 
 export interface ModalProps
   extends React.HtmlHTMLAttributes<HTMLAnchorElement> {
@@ -41,7 +44,12 @@ const Modal: FC<ModalProps> = ({
           <div className='fixed inset-0 transition-opacity bg-black backdrop-blur-md' />
         </Transition.Child>
 
-        <div className='fixed inset-0 z-[1000] overflow-y-auto'>
+        <div
+          className={classNames(
+            'fixed inset-0 z-[1000] overflow-y-auto',
+            noto.className
+          )}
+        >
           <div className='flex w-full min-h-full'>
             <Transition.Child
               as={Fragment}

@@ -19,7 +19,7 @@ const Navbar: FC = () => {
 
   return (
     <>
-      <div className='absolute z-10 flex flex-row items-center px-10 py-4 mt-4 bg-white max-sm:px-4 max-sm:py-3 max-sm:mt-3 rounded-2xl 2xl:left-80 2xl:right-80 xl:left-60 xl:right-60 md:left-20 md:right-20 sm:left-20 sm:right-20 max-sm:left-4 max-sm:right-4'>
+      <div className='fixed z-10 flex flex-row items-center px-10 py-4 mt-4 bg-white max-sm:px-4 max-sm:py-3 max-sm:mt-3 rounded-2xl 2xl:left-80 2xl:right-80 xl:left-60 xl:right-60 md:left-20 md:right-20 sm:left-20 sm:right-20 max-sm:left-4 max-sm:right-4'>
         <div className='flex items-center justify-between w-full'>
           <Image
             src={Logo}

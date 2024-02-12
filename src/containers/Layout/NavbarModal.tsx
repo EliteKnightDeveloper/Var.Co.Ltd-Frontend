@@ -7,25 +7,7 @@ import Logo from '~/images/Logo.png';
 import { useRouter } from 'next/navigation';
 import Button from '@/components/Button/Button';
 import Typograph from '@/components/Typograph/Typograph';
-
-const navbarItems: INavbar[] = [
-  {
-    title: 'サービス',
-    link: 'service',
-  },
-  {
-    title: '企業情報',
-    link: 'company',
-  },
-  {
-    title: '採用情報',
-    link: 'recruit',
-  },
-  {
-    title: 'お知らせ',
-    link: 'news ',
-  },
-];
+import { navbarItems } from '@/data/navbar';
 
 const NabvarModal: FC<ModalProps> = ({ isOpen, onClose }) => {
   const router = useRouter();
@@ -75,7 +57,7 @@ const NavbarItem: FC<INavbar> = ({ title, link }) => {
   return (
     <Typograph
       content={title}
-      style='hover:cursor-pointer text-md'
+      style='hover:cursor-pointer text-md text-white'
       onClick={() => router.push(`${link}`)}
     />
   );
