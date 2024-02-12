@@ -77,7 +77,7 @@ const ServiceItem: FC<IContent> = ({ id, image, title, subTitle, content }) => {
               <Typography content={title} />
               <Typography content={subTitle!} />
             </div>
-            <Typography style='text-md' content={content} />
+            <Typography style='text-md font-medium' content={content} />
             <div className='mt-4'>
               <Button text={'詳しく見る'} size='sm' />
             </div>
