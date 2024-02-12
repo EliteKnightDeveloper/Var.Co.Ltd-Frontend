@@ -2,10 +2,11 @@ import Image from 'next/image';
 import { FC } from 'react';
 import Modal, { ModalProps } from '@/components/Modal/Modal';
 import { INavbar } from '@/interfaces/navbar';
-import { Close } from '@/components/Icons';
+import { Close } from '@/components/Icons/Close';
 import Logo from '~/images/Logo.png';
 import { useRouter } from 'next/navigation';
 import Button from '@/components/Button/Button';
+import Typography from '@/components/Typography/Typography';
 
 const navbarItems: INavbar[] = [
   {
@@ -72,12 +73,11 @@ const NavbarItem: FC<INavbar> = ({ title, link }) => {
   const router = useRouter();
 
   return (
-    <span
-      className='text-white hover:cursor-pointer text-md'
+    <Typography
+      content={title}
+      style='hover:cursor-pointer text-md'
       onClick={() => router.push(`${link}`)}
-    >
-      {title}
-    </span>
+    />
   );
 };
 

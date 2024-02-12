@@ -1,9 +1,15 @@
 import { StaticImageData } from 'next/image';
 
-export interface IService {
+export interface IContent {
   id: number;
   image: StaticImageData;
-  title1: string;
-  title2?: string;
+  title: string;
+  subTitle?: string;
   content: string;
+}
+
+export interface IService {
+  title: string;
+  subTitle: string;
+  content: IContent[];
 }

@@ -1,8 +1,8 @@
-## Introduction
+## Live Demo
 
 This is a hometask project for [株式会社var](https://var-co-ltd-frontend.vercel.app/).
 
-## Technologies Used
+## Stacks
 
 - [Next.js](https://nextjs.org) -- React framework that enables several extra features, including server-side rendering and generating static websites
 - [Tailwind CSS](https://tailwindcss.com) -- CSS framework that provides single-purpose utility classes

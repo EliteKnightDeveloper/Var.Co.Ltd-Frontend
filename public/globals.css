@@ -7,11 +7,6 @@ body {
   line-height: 150%;
 }
 
-span {
-  font-weight: 700;
-  line-height: 150%;
-}
-
 html {
   scroll-behavior: smooth;
 }

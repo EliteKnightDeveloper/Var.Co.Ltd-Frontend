@@ -1,8 +1,5 @@
 import { FC } from 'react';
 import { classNames } from '@/utils';
-import { Noto_Sans_JP } from 'next/font/google';
-
-const noto = Noto_Sans_JP({ subsets: ['latin'] });
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
