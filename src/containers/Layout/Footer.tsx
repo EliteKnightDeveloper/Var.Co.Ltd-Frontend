@@ -4,29 +4,12 @@ import Button from '@/components/Button/Button';
 import Logo from '~/images/Logo.png';
 import { useRouter } from 'next/navigation';
 import Typograph from '@/components/Typograph/Typograph';
-
-const corporateItems: string[] = [
-  'ミッション',
-  'ビジョン',
-  'バリュー',
-  '役員一覧',
-  '会社概要',
-];
-
-const serviceItems: string[] = [
-  'ITスクール RareTECH',
-  'インフラ学習サービス エンベーダー',
-  'システム・アプリケーション開発',
-  'Web制作',
-];
-
-const recruitItems: string[] = ['代表メッセージ', '募集要項'];
-
-const otherItems: string[] = [
-  'お知らせ',
-  'サステナビリティ',
-  'プライバシーポリシー',
-];
+import {
+  corporateItems,
+  otherItems,
+  recruitItems,
+  serviceItems,
+} from '@/data/footer';
 
 const Footer: FC = () => {
   const router = useRouter();
