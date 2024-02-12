@@ -1,22 +1,18 @@
 import { FC } from 'react';
-import { classNames } from '@/utils';
-import { Inter, Noto_Sans_JP } from 'next/font/google';
-
-const noto = Noto_Sans_JP({ subsets: ['latin'] });
-const inter = Inter({ subsets: ['latin'] });
+import Typography from '@/components/Typography/Typography';
 
 interface MarkHeadingProps {
-  content: string;
   title: string;
+  subTitle: string;
 }
 
-const MarkHeading: FC<MarkHeadingProps> = ({ content, title }) => {
+const MarkHeading: FC<MarkHeadingProps> = ({ title, subTitle }) => {
   return (
     <div className='flex flex-row items-center gap-4 w-fit'>
       <div className='w-2 bg-accent min-h-16' />
       <div className='flex flex-col text-white'>
-        <span className='text-4xl'>{title}</span>
-        <span className='text-sm'>{content}</span>
+        <Typography style='text-4xl' content={title} />
+        <Typography style='text-sm' content={subTitle} />
       </div>
     </div>
   );

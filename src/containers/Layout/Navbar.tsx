@@ -4,8 +4,9 @@ import { useRouter } from 'next/navigation';
 import Button from '@/components/Button/Button';
 import { INavbar } from '@/interfaces/navbar';
 import NabvarModal from './NabvarModal';
-import { Menu } from '@/components/Icons';
+import { Menu } from '@/components/Icons/Menu';
 import Logo from '~/images/Logo.png';
+import Typography from '@/components/Typography/Typography';
 
 const navbarItems: INavbar[] = [
   {
@@ -84,12 +85,11 @@ const NavbarItem: FC<INavbar> = ({ title, link }) => {
   const router = useRouter();
 
   return (
-    <span
-      className='hover:cursor-pointer text-md'
+    <Typography
+      content={title}
+      style='hover:cursor-pointer text-md'
       onClick={() => router.push(`${link}`)}
-    >
-      {title}
-    </span>
+    />
   );
 };
 

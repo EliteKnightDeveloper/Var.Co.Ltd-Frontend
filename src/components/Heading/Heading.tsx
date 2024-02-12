@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Typography from '@/components/Typography/Typography';
 
 interface HeadingProps {
   content: string;
@@ -8,8 +9,8 @@ interface HeadingProps {
 const Heading: FC<HeadingProps> = ({ content, title }) => {
   return (
     <div className='flex flex-col text-center text-white'>
-      <span className='text-5xl'>{title}</span>
-      <span className='text-accent text-md'>{content}</span>
+      <Typography style='text-5xl' content={title} />
+      <Typography style='text-accent text-md' content={content} />
     </div>
   );
 };

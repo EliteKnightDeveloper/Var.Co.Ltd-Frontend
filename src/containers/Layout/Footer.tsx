@@ -3,6 +3,30 @@ import { FC } from 'react';
 import Button from '@/components/Button/Button';
 import Logo from '~/images/Logo.png';
 import { useRouter } from 'next/navigation';
+import Typography from '@/components/Typography/Typography';
+
+const corporateItems: string[] = [
+  'ミッション',
+  'ビジョン',
+  'バリュー',
+  '役員一覧',
+  '会社概要',
+];
+
+const serviceItems: string[] = [
+  'ITスクール RareTECH',
+  'インフラ学習サービス エンベーダー',
+  'システム・アプリケーション開発',
+  'Web制作',
+];
+
+const recruitItems: string[] = ['代表メッセージ', '募集要項'];
+
+const otherItems: string[] = [
+  'お知らせ',
+  'サステナビリティ',
+  'プライバシーポリシー',
+];
 
 const Footer: FC = () => {
   const router = useRouter();
@@ -17,69 +41,87 @@ const Footer: FC = () => {
             className='hover:cursor-pointer'
             onClick={() => router.push('/')}
           />
-          <span className='text-xl'>株式会社var</span>
+          <Typography style='text-xl' content={'株式会社var'} />
           <div className='flex flex-col text-sm'>
-            <span className='font-medium'>〒 891-0145</span>
-            <span className='font-medium'>鹿児島県鹿児島市錦江台3-21-22</span>
+            <Typography style='font-medium' content={'〒 891-0145'} />
+            <Typography
+              style='font-medium'
+              content={'鹿児島県鹿児島市錦江台3-21-22'}
+            />
           </div>
           <div className='flex flex-row gap-2 text-sm text-gray-800 '>
             <a href='https://twitter.com/RaretechO' target='_blank'>
-              <span className='font-medium hover:cursor-pointer'>Twitter</span>
+              <Typography
+                style='font-medium hover:cursor-pointer'
+                content={'Twitter'}
+              />
             </a>
             <a href='https://zenn.dev/var' target='_blank'>
-              <span className='font-medium hover:cursor-pointer'>Zenn</span>
+              <Typography
+                style='font-medium hover:cursor-pointer'
+                content={'Zenn'}
+              />
             </a>
           </div>
         </div>
         <div className='flex flex-col gap-6'>
-          <div className='flex gap-10 lg:flex-row md:gap-4 md:w-full md:flex-col sm:flex-col max-sm:flex-col'>
-            <div className='flex flex-row gap-4 md:justify-between sm:justify-between max-sm:flex-col'>
+          <div className='flex lg:gap-10 lg:flex-row gap-4 md:w-full md:flex-col sm:flex-col max-sm:flex-col'>
+            <div className='flex flex-row gap-4 lg:gap-10 md:justify-between sm:justify-between max-sm:flex-col'>
               <div className='flex flex-col gap-2'>
-                <span className='text-gray-100 text-md hover:cursor-pointer'>
-                  サービス
-                </span>
-                <div className='flex flex-col gap-2 text-gray-800'>
-                  <span className='hover:cursor-pointer'>
-                    ITスクール RareTECH
-                  </span>
-                  <span className='hover:cursor-pointer'>
-                    インフラ学習サービス エンベーダー
-                  </span>
-                  <span className='hover:cursor-pointer'>
-                    システム・アプリケーション開発
-                  </span>
-                  <span className='hover:cursor-pointer'>Web制作</span>
+                <Typography
+                  style='text-gray-100 text-md hover:cursor-pointer'
+                  content={'サービス'}
+                />
+                <div className='flex flex-col gap-2 text-gray-800 text-sm'>
+                  {serviceItems.map((item, index) => (
+                    <Typography
+                      key={index}
+                      style='text-gray-800 text-md hover:cursor-pointer'
+                      content={item}
+                    />
+                  ))}
                 </div>
               </div>
               <div className='flex flex-col gap-2'>
-                <span className='text-gray-100 text-md hover:cursor-pointer'>
-                  企業情報
-                </span>
-                <div className='flex flex-col gap-2 text-gray-800'>
-                  <span className='hover:cursor-pointer'>ミッション</span>
-                  <span className='hover:cursor-pointer'>ビジョン</span>
-                  <span className='hover:cursor-pointer'>バリュー</span>
-                  <span className='hover:cursor-pointer'>役員一覧</span>
-                  <span className='hover:cursor-pointer'>会社概要</span>
+                <Typography
+                  style='text-gray-100 text-md hover:cursor-pointer'
+                  content={'企業情報'}
+                />
+                <div className='flex flex-col gap-2 text-gray-800 text-sm'>
+                  {corporateItems.map((item, index) => (
+                    <Typography
+                      key={index}
+                      style='hover:cursor-pointer'
+                      content={item}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
-            <div className='flex flex-row gap-4 md:justify-between sm:justify-between max-sm:flex-col'>
+            <div className='flex flex-row gap-4 lg:gap-10 md:justify-between sm:justify-between max-sm:flex-col'>
               <div className='flex flex-col gap-2'>
-                <span className='text-gray-100 text-md hover:cursor-pointer'>
-                  採用情報
-                </span>
-                <div className='flex flex-col gap-2 text-gray-800'>
-                  <span className='hover:cursor-pointer'>代表メッセージ</span>
-                  <span className='hover:cursor-pointer'>募集要項</span>
+                <Typography
+                  style='text-gray-100 text-md hover:cursor-pointer'
+                  content={'採用情報'}
+                />
+                <div className='flex flex-col gap-2 text-gray-800 text-sm'>
+                  {recruitItems.map((item, index) => (
+                    <Typography
+                      key={index}
+                      style='hover:cursor-pointer'
+                      content={item}
+                    />
+                  ))}
                 </div>
               </div>
               <div className='flex flex-col gap-2 text-gray-100 text-md'>
-                <span className='hover:cursor-pointer'>お知らせ</span>
-                <span className='hover:cursor-pointer'>サステナビリティ</span>
-                <span className='hover:cursor-pointer'>
-                  プライバシーポリシー
-                </span>
+                {otherItems.map((item, index) => (
+                  <Typography
+                    key={index}
+                    style='hover:cursor-pointer'
+                    content={item}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -95,9 +137,10 @@ const Footer: FC = () => {
         </div>
       </div>
       <div className='flex justify-center w-full'>
-        <span className='text-xs text-gray-800'>
-          ©︎ {new Date().getFullYear()} var Inc.
-        </span>
+        <Typography
+          style='text-xs text-gray-800text-xs text-gray-800'
+          content={`©︎ ${new Date().getFullYear()} var Inc.`}
+        />
       </div>
     </div>
   );
