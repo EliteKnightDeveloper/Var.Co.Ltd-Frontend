@@ -1,13 +1,13 @@
 import { classNames } from '@/utils';
 import { FC } from 'react';
 
-interface TypographyProps {
+interface TypographProps {
   content: string;
   style?: string;
   onClick?: () => void;
 }
 
-const Typography: FC<TypographyProps> = ({ content, style, onClick }) => {
+const Typograph: FC<TypographProps> = ({ content, style, onClick }) => {
   return (
     <span className={classNames('leading-normal', style!)} onClick={onClick}>
       {content}
@@ -15,4 +15,4 @@ const Typography: FC<TypographyProps> = ({ content, style, onClick }) => {
   );
 };
 
-export default Typography;
+export default Typograph;

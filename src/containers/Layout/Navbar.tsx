@@ -2,30 +2,12 @@ import Image from 'next/image';
 import { FC, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Button from '@/components/Button/Button';
-import { INavbar } from '@/interfaces/navbar';
-import NabvarModal from './NabvarModal';
+import { INavbar } from '@/interfaces';
+import NavbarModal from './NavbarModal';
 import { Menu } from '@/components/Icons/Menu';
 import Logo from '~/images/Logo.png';
-import Typography from '@/components/Typography/Typography';
-
-const navbarItems: INavbar[] = [
-  {
-    title: 'サービス',
-    link: 'service',
-  },
-  {
-    title: '企業情報',
-    link: 'company',
-  },
-  {
-    title: '採用情報',
-    link: 'recruit',
-  },
-  {
-    title: 'お知らせ',
-    link: 'news ',
-  },
-];
+import Typograph from '@/components/Typograph/Typograph';
+import { navbarItems } from '@/data/navbar';
 
 const Navbar: FC = () => {
   const router = useRouter();
@@ -71,7 +53,7 @@ const Navbar: FC = () => {
           </div>
         </div>
       </div>
-      <NabvarModal
+      <NavbarModal
         isOpen={isOpen}
         onClose={() => {
           setIsOpen(false);
@@ -85,7 +67,7 @@ const NavbarItem: FC<INavbar> = ({ title, link }) => {
   const router = useRouter();
 
   return (
-    <Typography
+    <Typograph
       content={title}
       style='hover:cursor-pointer text-md'
       onClick={() => router.push(`${link}`)}
