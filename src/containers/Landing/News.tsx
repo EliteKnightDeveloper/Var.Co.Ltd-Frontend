@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { FC } from 'react';
-
 import Button from '@/components/Button/Button';
 import { INews } from '@/interfaces/news';
 import Heading from '@/components/Heading/Heading';

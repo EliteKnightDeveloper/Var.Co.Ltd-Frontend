@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { FC } from 'react';
 import Heading from '@/components/Heading/Heading';
 import MarkHeading from '@/components/MarkHeading/MarkHeading';
-
 import Button from '@/components/Button/Button';
 import { IContent, IService } from '@/interfaces/service';
 import Typography from '@/components/Typography/Typography';

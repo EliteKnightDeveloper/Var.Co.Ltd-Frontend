@@ -106,6 +106,7 @@ const serviceItems: IService[] = [
     ],
   },
 ];
+
 const Landing: FC = () => {
   return (
     <>
