@@ -3,8 +3,8 @@ import { FC } from 'react';
 import Heading from '@/components/Heading/Heading';
 import MarkHeading from '@/components/MarkHeading/MarkHeading';
 import Button from '@/components/Button/Button';
-import { IContent, IService } from '@/interfaces/service';
-import Typography from '@/components/Typography/Typography';
+import { IContent, IService } from '@/interfaces';
+import Typograph from '@/components/Typograph/Typograph';
 
 interface ServiceProps {
   serviceItems: IService[];
@@ -18,7 +18,7 @@ const Service: FC<ServiceProps> = ({ serviceItems }) => {
     >
       <div className='flex flex-col justify-center gap-10 px-40 text-center text-white max-sm:px-4'>
         <Heading title={'Service'} content={'事業内容'} />
-        <Typography
+        <Typograph
           style='font-medium text-left text-white text-md'
           content={
             'ITエンジニア教育事業・受託開発事業をはじめとし、テクノロジーを活用した各種サービスを提供しております。'
@@ -26,20 +26,20 @@ const Service: FC<ServiceProps> = ({ serviceItems }) => {
         />
       </div>
       <div className='flex flex-col gap-20'>
-        {serviceItems.map((serviceItem, index) => (
-          <div className='flex flex-col gap-10 max-sm:px-4' key={index}>
+        {serviceItems.map((serviceItem, key) => (
+          <div className='flex flex-col gap-10 max-sm:px-4' key={key}>
             <MarkHeading
               title={serviceItem.title}
               subTitle={serviceItem.subTitle}
             />
             <div className='flex flex-col gap-16 max-lg:hidden'>
-              {serviceItem.content.map((item, index) => (
-                <ServiceItem {...item} key={index} />
+              {serviceItem.content.map((item, key) => (
+                <ServiceItem {...item} key={key} />
               ))}
             </div>
             <div className='flex-col hidden gap-10 max-lg:flex'>
-              {serviceItem.content.map((item, index) => (
-                <MobileServiceItem {...item} key={index} />
+              {serviceItem.content.map((item, key) => (
+                <MobileServiceItem {...item} key={key} />
               ))}
             </div>
           </div>
@@ -61,10 +61,10 @@ const ServiceItem: FC<IContent> = ({ id, image, title, subTitle, content }) => {
           />
           <div className='flex flex-col gap-6 text-white max-lg:flex-1'>
             <div className='flex flex-col text-2xl'>
-              <Typography content={title} />
-              <Typography content={subTitle!} />
+              <Typograph content={title} />
+              <Typograph content={subTitle!} />
             </div>
-            <Typography style='text-md font-medium' content={content} />
+            <Typograph style='text-md font-medium' content={content} />
             <div className='mt-4'>
               <Button text={'詳しく見る'} size='sm' />
             </div>
@@ -74,10 +74,10 @@ const ServiceItem: FC<IContent> = ({ id, image, title, subTitle, content }) => {
         <>
           <div className='flex flex-col gap-6 text-white max-lg:flex-1'>
             <div className='flex flex-col text-2xl '>
-              <Typography content={title} />
-              <Typography content={subTitle!} />
+              <Typograph content={title} />
+              <Typograph content={subTitle!} />
             </div>
-            <Typography style='text-md font-medium' content={content} />
+            <Typograph style='text-md font-medium' content={content} />
             <div className='mt-4'>
               <Button text={'詳しく見る'} size='sm' />
             </div>
@@ -102,12 +102,12 @@ const MobileServiceItem: FC<IContent> = ({
   return (
     <div className='flex flex-col gap-2 text-white'>
       <div className='flex flex-col text-2xl'>
-        <Typography content={title} />
-        <Typography content={subTitle!} />
+        <Typograph content={title} />
+        <Typograph content={subTitle!} />
       </div>
       <Image src={image} alt={'Service'} className='rounded-2xl' />
       <div className='flex flex-col gap-6'>
-        <Typography style='text-md' content={content} />
+        <Typograph style='text-md' content={content} />
         <div className='mt-4'>
           <Button text={'詳しく見る'} size='sm' />
         </div>

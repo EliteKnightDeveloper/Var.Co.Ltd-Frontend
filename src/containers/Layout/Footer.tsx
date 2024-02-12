@@ -3,7 +3,7 @@ import { FC } from 'react';
 import Button from '@/components/Button/Button';
 import Logo from '~/images/Logo.png';
 import { useRouter } from 'next/navigation';
-import Typography from '@/components/Typography/Typography';
+import Typograph from '@/components/Typograph/Typograph';
 
 const corporateItems: string[] = [
   'ミッション',
@@ -41,23 +41,23 @@ const Footer: FC = () => {
             className='hover:cursor-pointer'
             onClick={() => router.push('/')}
           />
-          <Typography style='text-xl' content={'株式会社var'} />
+          <Typograph style='text-xl' content={'株式会社var'} />
           <div className='flex flex-col text-sm'>
-            <Typography style='font-medium' content={'〒 891-0145'} />
-            <Typography
+            <Typograph style='font-medium' content={'〒 891-0145'} />
+            <Typograph
               style='font-medium'
               content={'鹿児島県鹿児島市錦江台3-21-22'}
             />
           </div>
           <div className='flex flex-row gap-2 text-sm text-gray-800 '>
             <a href='https://twitter.com/RaretechO' target='_blank'>
-              <Typography
+              <Typograph
                 style='font-medium hover:cursor-pointer'
                 content={'Twitter'}
               />
             </a>
             <a href='https://zenn.dev/var' target='_blank'>
-              <Typography
+              <Typograph
                 style='font-medium hover:cursor-pointer'
                 content={'Zenn'}
               />
@@ -68,13 +68,13 @@ const Footer: FC = () => {
           <div className='flex lg:gap-10 lg:flex-row gap-4 md:w-full md:flex-col sm:flex-col max-sm:flex-col'>
             <div className='flex flex-row gap-4 lg:gap-10 md:justify-between sm:justify-between max-sm:flex-col'>
               <div className='flex flex-col gap-2'>
-                <Typography
+                <Typograph
                   style='text-gray-100 text-md hover:cursor-pointer'
                   content={'サービス'}
                 />
                 <div className='flex flex-col gap-2 text-gray-800 text-sm'>
                   {serviceItems.map((item, index) => (
-                    <Typography
+                    <Typograph
                       key={index}
                       style='text-gray-800 text-md hover:cursor-pointer'
                       content={item}
@@ -83,13 +83,13 @@ const Footer: FC = () => {
                 </div>
               </div>
               <div className='flex flex-col gap-2'>
-                <Typography
+                <Typograph
                   style='text-gray-100 text-md hover:cursor-pointer'
                   content={'企業情報'}
                 />
                 <div className='flex flex-col gap-2 text-gray-800 text-sm'>
                   {corporateItems.map((item, index) => (
-                    <Typography
+                    <Typograph
                       key={index}
                       style='hover:cursor-pointer'
                       content={item}
@@ -100,13 +100,13 @@ const Footer: FC = () => {
             </div>
             <div className='flex flex-row gap-4 lg:gap-10 md:justify-between sm:justify-between max-sm:flex-col'>
               <div className='flex flex-col gap-2'>
-                <Typography
+                <Typograph
                   style='text-gray-100 text-md hover:cursor-pointer'
                   content={'採用情報'}
                 />
                 <div className='flex flex-col gap-2 text-gray-800 text-sm'>
                   {recruitItems.map((item, index) => (
-                    <Typography
+                    <Typograph
                       key={index}
                       style='hover:cursor-pointer'
                       content={item}
@@ -116,7 +116,7 @@ const Footer: FC = () => {
               </div>
               <div className='flex flex-col gap-2 text-gray-100 text-md'>
                 {otherItems.map((item, index) => (
-                  <Typography
+                  <Typograph
                     key={index}
                     style='hover:cursor-pointer'
                     content={item}
@@ -137,7 +137,7 @@ const Footer: FC = () => {
         </div>
       </div>
       <div className='flex justify-center w-full'>
-        <Typography
+        <Typograph
           style='text-xs text-gray-800text-xs text-gray-800'
           content={`©︎ ${new Date().getFullYear()} var Inc.`}
         />

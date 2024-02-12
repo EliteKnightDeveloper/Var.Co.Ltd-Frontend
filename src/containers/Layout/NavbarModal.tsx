@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import { FC } from 'react';
 import Modal, { ModalProps } from '@/components/Modal/Modal';
-import { INavbar } from '@/interfaces/navbar';
+import { INavbar } from '@/interfaces';
 import { Close } from '@/components/Icons/Close';
 import Logo from '~/images/Logo.png';
 import { useRouter } from 'next/navigation';
 import Button from '@/components/Button/Button';
-import Typography from '@/components/Typography/Typography';
+import Typograph from '@/components/Typograph/Typograph';
 
 const navbarItems: INavbar[] = [
   {
@@ -73,7 +73,7 @@ const NavbarItem: FC<INavbar> = ({ title, link }) => {
   const router = useRouter();
 
   return (
-    <Typography
+    <Typograph
       content={title}
       style='hover:cursor-pointer text-md'
       onClick={() => router.push(`${link}`)}

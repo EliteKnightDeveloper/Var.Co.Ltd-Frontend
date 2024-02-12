@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { FC } from 'react';
 import Button from '@/components/Button/Button';
-import { INews } from '@/interfaces/news';
+import { INews } from '@/interfaces';
 import Heading from '@/components/Heading/Heading';
-import Typography from '@/components/Typography/Typography';
+import Typograph from '@/components/Typograph/Typograph';
 
 interface NewsItems {
   newsItems: INews[];
@@ -39,12 +39,12 @@ const NewsItem: FC<INews> = ({
         <div
           className={`absolute right-4 top-4 rounded-full py-1 px-[9px] ${badgeColor}`}
         >
-          <Typography style='text-sm text-white' content={badgeContent} />
+          <Typograph style='text-sm text-white' content={badgeContent} />
         </div>
       </div>
       <div className='flex flex-col gap-1 text-white'>
-        <Typography style='text-sm' content={date} />
-        <Typography style='text-xl' content={content} />
+        <Typograph style='text-sm' content={date} />
+        <Typograph style='text-xl' content={content} />
       </div>
     </div>
   );
