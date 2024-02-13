@@ -32,12 +32,29 @@ const NewsItem: FC<INews> = ({
   badgeColor,
   badgeContent,
 }) => {
+  const setColor = (value: string) => {
+    switch (value) {
+      case 'black':
+        return 'bg-black';
+      case 'blue':
+        return 'bg-blue';
+      case 'aqua':
+        return 'bg-aqua';
+      case 'orange':
+        return 'bg-orange';
+      case 'purple':
+        return 'bg-purple';
+      case 'blue':
+        return 'bg-blue';
+    }
+  };
+
   return (
     <div className='flex flex-col flex-1 gap-4'>
       <div className='relative'>
         <Image src={image} alt='News1' className='rounded-2xl' />
         <div
-          className={`absolute right-4 top-4 rounded-full py-1 px-[9px] ${badgeColor}`}
+          className={`absolute right-4 top-4 rounded-full py-1 px-[9px] ${setColor(badgeColor)}`}
         >
           <Typograph style='text-sm text-white' content={badgeContent} />
         </div>
