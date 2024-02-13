@@ -41,13 +41,13 @@ export const newsItems: INews[] = [
     date: '2023.05.16',
     content: 'Web制作の受託開発事業を開始しました。',
     badgeColor: 'purple',
-    badgeContent: 'RareTECH',
+    badgeContent: 'Web制作',
   },
   {
     image: News6,
     date: '2022.01.30',
     content: 'ITスクールRareTECHの受講生が300名を突破しました。',
     badgeColor: 'blue',
-    badgeContent: 'エンベーダー',
+    badgeContent: 'RareTECH',
   },
 ];
