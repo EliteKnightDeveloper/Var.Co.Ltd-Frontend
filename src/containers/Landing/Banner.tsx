@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import Button from '@/components/Button/Button';
 import Typograph from '@/components/Typograph/Typograph';
+import News1 from '~/images/News1.jpg';
 
 const Banner: FC = () => {
   return (

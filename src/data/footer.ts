@@ -21,4 +21,4 @@ const otherItems: string[] = [
   'プライバシーポリシー',
 ];
 
-export { corporateItems, serviceItems, recruitItems, otherItems }
+export { corporateItems, serviceItems, recruitItems, otherItems };

@@ -1,4 +1,4 @@
-import { INavbar } from "@/interfaces";
+import { INavbar } from '@/interfaces';
 
 export const navbarItems: INavbar[] = [
   {
