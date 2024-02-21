@@ -32,14 +32,14 @@ export const serviceItems: IService[] = [
     subTitle: '受託開発事業',
     content: [
       {
-        id: 3,
+        id: 2,
         image: Service3,
         title: 'システム・アプリケーション開発',
         content:
           '要件定義から実装、運用まで、フルスクラッチにてアプリケーションを開発します。クラウドネイティブ開発をメインとしております。',
       },
       {
-        id: 4,
+        id: 3,
         image: Service4,
         title: 'Web制作',
         content:
